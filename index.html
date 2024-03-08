@@ -47,42 +47,53 @@
                   </div>
 <!-- end Image file -->
 
-<!-- start Fn & Ln -->
+<!-- start Fn & Ln //validated-OK -->
                 <div class="row">
-                    <label for="validatefn" class="form-label">Name</label>
-                    <div class="col">
-                      <input type="text" class="form-control is-valid" placeholder="First name" id="validatefn">
-                    </div>
-                    <div class="valid-feedback">Looks good!</div>
+                    <div class="col-6">
+                        <label for="validationServer01" class="form-label">First name</label>
+                        <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Mark" required>
+                        <div class="invalid-feedback">
+                            Please Fill Your Information.
+                        </div>                    
+                    </div>   
                     <!--  -->
-                    <div class="col">
-                      <input type="text" class="form-control" placeholder="Last name">
+                    <div class="col-6">
+                        <label for="validationServer02" class="form-label">Last name</label>
+                        <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Otto" required>
+                        <div class="invalid-feedback">
+                            Please Fill Your Information.
+                        </div>
                     </div>
                 </div>
 <!-- end Fn & Ln -->
 
-<!-- star ตำแหน่งที่ 1 -->
+<!-- star ตำแหน่งที่ 1 //validated-OK -->
                 <div class="row">
                     <div class="col-md-4 mt-1 w-50">
-                        <label for="inputState" class="form-label">Position 1</label>
-                        <select id="inputState" class="form-select">
-                        <option selected>Choose...</option>
-                        <option>Finance Manager</option>
-                        <option>Sales Manager</option>
-                        <option>Accounting Manager</option>
-                        <option>Secretary</option>
+                        <label for="validatePosition1" class="form-label">Position 1</label>
+                        <select class="form-select" id="validatePosition1" required>
+                            <option selected disabled value="">Choose...</option>
+                            <option>Finance Manager</option>
+                            <option>Sales Manager</option>
+                            <option>Accounting Manager</option>
+                            <option>Secretary</option>
                         </select>
+                        <div class="invalid-feedback">Please select a valid Position 1.</div>
                     </div>
 <!-- end ตำแหน่งที่ 1 -->
 <!-- start Expected salary 1 -->
                     <div class="col mt-1">
-                        <label for="inputState" class="form-label">Expected salary</label>
-                            <div class="input-group w-auto ">
+                        <label for="validateSalary" class="form-label">Expected salary</label>
+                            <div class="input-group has-validation w-auto">
                                 <span class="input-group-text">฿</span>
-                                <input type="text" class="form-control" aria-label="Amount" placeholder="/month">
+                                <input type="text" class="form-control" id="validateSalary" placeholder="/month" required>
                                 <span class="input-group-text">.00</span>
+                                <div class="invalid-feedback">Please fill your expected salary </div>
+
                             </div>
+
                     </div>
+
                 </div>
 <!-- end Expected salary 1 -->
 
@@ -1089,7 +1100,7 @@
                     <!-- <p><input class="form-check-input" type="checkbox"> Yes</p> -->
         </div>
         <div style="text-align: center;" >
-            <button type="submit" class="btn btn-primary mb-5" style="width: 500px;">Submit</button>
+            <button type="submit" disabled class="btn btn-primary mb-5" style="width: 500px;">Submit</button>
         </div>
     </form>
 
